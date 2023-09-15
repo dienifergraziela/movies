@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import "./styles.css";
+
+import { NavBar } from "../../components/navbar";
+import { Footer } from "../../components/footer";
 
 const Movie = () => {
     const { id } = useParams();
@@ -26,9 +28,9 @@ const Movie = () => {
 
     return (
         <div id="section">
-            <nav>
-                <h1>Movie</h1>
-            </nav>
+
+            <NavBar/>
+
             <div className="card mb-3" id="movie">
                 <div className="row g-0" id="sla">
                     <div className="col-md-4">
