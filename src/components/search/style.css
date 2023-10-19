@@ -1,0 +1,47 @@
+#btn {
+    text-align: center;
+}
+
+#btn input {
+    margin-top: 5vh;
+    border-radius: 30px;
+    width: 30vw;
+    height: 7vh;
+    border: none;
+    text-align: center;
+    background-color: #ffc509;
+    margin-bottom: 5vh;
+}
+
+#btn input:hover {
+    background-color: #de1a62;
+    color: #fff;
+    border: none;
+    transform: scale(1.02);
+}
+
+#btn button {
+    border: none;
+    border-radius: 50px;
+    margin-left: 1px;
+}
+
+#btn button:hover{
+    color: #fff;
+    background-color: #1db6bb;
+    transform: scale(1.02);
+}
+
+#btn button img {
+    width: 1.5vw;
+}
+
+input::placeholder {
+    color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+    #btn input {
+        width: 70vw; 
+    }
+}

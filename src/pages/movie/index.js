@@ -3,7 +3,9 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 import { NavBar } from "../../components/navbar";
-import { Footer } from "../../components/footer";
+import { Avaliation } from "../../components/avaliation";
+import "./styles.css";
+
 
 const Movie = () => {
     const { id } = useParams();
@@ -29,30 +31,37 @@ const Movie = () => {
     return (
         <div id="section">
 
-            <NavBar/>
-
-            <div className="card mb-3" id="movie">
-                <div className="row g-0" id="sla">
-                    <div className="col-md-4">
+            <NavBar />
+            <div className="container" id="movie">
+                <div className="row">
+                    <div className="col-md-3">
                         <img
                             className="img-fluid rounded-start"
                             src={`${imagePath}${movie.poster_path}`}
                             alt="{movie.title}"
-                        />        </div>
-                    <div className="col-md-8">
+                        />
+                        <Avaliation />
+                    </div>
+                    <div className="col-md-9">
                         <div className="card-body">
                             <h1 className="card-title">{movie.title}</h1>
-                            <p className="card-text" id="dataL">Data de lançamento: {movie.release_date}</p>
-                            <h4>Descrição</h4>
+                            <h4>Descrição:</h4>
                             <p className="card-text">{movie.overview}</p>
-                            <Link to="/">
-                                <button className="link_button">Voltar</button>
-                            </Link>
+                            <i class="fas fa-calendar"></i>
+                            <p className="card-text" id="dataL"> Data de lançamento: {movie.release_date}</p>
+                            <div>
+                                <Link to="/">
+                                    <button className="link_button">Voltar</button>
+                                </Link>
+                            </div>
+
 
                         </div>
                     </div>
+
                 </div>
             </div>
+
 
         </div>
     );
